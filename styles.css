@@ -1,0 +1,100 @@
+body {
+    font-family: 'Nunito', sans-serif; /* Changed Font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background-color 0.4s ease-in-out; /* Smoother Transition */
+    background-color: #f9f9f9; /* Default background */
+}
+
+.container {
+    text-align: center;
+    padding: 3rem; /* Increased padding */
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Deeper shadow */
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 650px; /* Slightly wider */
+}
+
+h1 {
+    font-size: 2.5rem; /* Larger heading */
+    font-weight: 600;
+    color: #3a3a3a;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.5px;
+}
+
+.mood-selection {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem; /* Increased gap */
+    margin-bottom: 3rem;
+    flex-wrap: wrap; /* Ensure wrapping */
+}
+
+.mood-button {
+    font-size: 2.2rem; /* Larger icons */
+    padding: 1.2rem 1.8rem; /* Adjusted padding */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mood-button:hover {
+    transform: scale(1.15);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.mood-button:active {
+    transform: scale(0.95); /* Slight shrink on click */
+}
+
+.mood-history {
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.mood-history h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 1.5rem;
+}
+
+#mood-list {
+    list-style: none;
+    padding: 0;
+}
+
+#mood-list li {
+    padding: 0.8rem 1.2rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background-color 0.2s ease;
+}
+
+#mood-list li:hover {
+    background-color: #f8f8f8;
+}
+
+/* Color Palette Refinement */
+.mood-button[data-mood="happy"] { background-color: #fff9c4; }
+.mood-button[data-mood="sad"] { background-color: #bbdefb; }
+.mood-button[data-mood="excited"] { background-color: #ffcdd2; }
+.mood-button[data-mood="calm"] { background-color: #c8e6c9; }
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    .mood-button {
+        font-size: 2rem;
+        padding: 1rem 1.5rem;
+    }
+}
